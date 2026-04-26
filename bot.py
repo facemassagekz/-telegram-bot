@@ -11,4 +11,5 @@ app = Application.builder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 
 if __name__ == "__main__":
-    app.run_polling()
+    app.run_polling(allowed_updates=Update.ALL_TYPES)
+    
